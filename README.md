@@ -4,49 +4,40 @@ Multi-agent LLM simulation system for studying belief propagation and manipulati
 
 ## Overview
 
-Modern AI systems are evolving from single agents into networks of collaborating agents that share memory, exchange information, and converge on decisions.
+MINDSTATE is a research project exploring how false beliefs spread through networks of LLM agents with memory.
 
-MINDSTATE is a research-driven simulation platform I built to study how false beliefs spread through multi-agent LLM systems, how quickly these systems reach consensus, and how vulnerable they are to adversarial memory injection.
+The project studies how quickly agents reach consensus, how vulnerable they are to injected false memories, and how manipulation propagates across a multi-agent system.
 
-This project was developed as part of my research and presented at MIT URTC.
+This work was developed as part of my research and presented at MIT URTC.
 
-## What It Does
+## Repository Contents
 
-- Simulates memory-aware LLM agents interacting in a network
-- Models belief updates over repeated interaction rounds
-- Injects false memory into a selected agent and tracks propagation
-- Measures consensus speed, divergence, and manipulation success
-- Visualizes belief trajectories and network-wide belief shifts
+- `basic_agent.py` – baseline agent behavior
+- `memory_agent.py` – memory-aware agent logic
+- `multiagent_network.py` – multi-agent network structure and interactions
+- `memory_manipulation_experiment.py` – experiment for false-memory injection
+- `drift_detector.py` – analysis of belief drift and divergence
+- `mindstate_visualizations.py` – visualization utilities for results
+- `large_scale_test.py` – larger-scale experimental testing
+- `run_simulation.py` – main entry point for running simulations
 
-## System Architecture
+## Key Research Questions
 
-MINDSTATE is organized into four layers:
-
-1. **Agent Layer**  
-   Memory-aware agents maintain internal belief states and update them over time.
-
-2. **Network Layer**  
-   Agents are connected through configurable topologies that control how beliefs spread.
-
-3. **Experiment Layer**  
-   Experiments evaluate consensus formation, divergence, and vulnerability to manipulation.
-
-4. **Visualization Layer**  
-   Outputs include interpretable plots of belief trajectories, convergence, and takeover dynamics.
+- How fast do LLM agents reach consensus?
+- Can a single false memory manipulate an entire network?
+- Do agent traits or network structure offer protection?
 
 ## Key Findings
 
-- LLM agents reached consensus significantly faster than classical social dynamics baselines
-- A single injected false memory was able to spread across the full network in repeated trials
-- Manipulation succeeded even across varied personalities and network structures
-- Topics with weaker prior reinforcement were more vulnerable to false-memory takeover
+- LLM agents converged faster than classical consensus baselines
+- A single false memory could propagate through the network
+- Manipulation remained effective across multiple settings
 
 ## Next Steps
 
-- Add a minimal runnable simulation
-- Add sample experiment configurations
-- Add result visualizations
-- Prototype defenses such as memory authentication and adversarial verification
+- Add sample inputs and outputs
+- Add diagrams and result plots
+- Prototype defenses such as memory verification and adversarial checking
 
 ## Author
 
